@@ -1,0 +1,28 @@
+stages:
+  - docker-registre-gitlab
+
+variables:
+  APP_URL: http://www.google.com
+  APP_VERSION: $CI_PIPELINE_IID  # CI_PIPELINE_ID : for job only
+
+
+build docker image:
+  stage: docker-registre-gitlab
+  image: docker:28.0.1
+  services:    # same version docker client ans service
+    - docker:28.0.1-dind
+  script:
+    - ls -lah  # Liste tousles fichiers pour voir sil y a un Dockerfile
+    - cat Dockerfile  # Affiche le contenu du Dockerfile
+    - docker build -t $CI_REGISTRY_IMAGE -t $CI_REGISTRY_IMAGE:$APP_VERSION .
+    - echo "Image version __ $CI_REGISTRY_IMAGE"
+    - docker images
+    - docker run -e SERVERNAME=localhost $CI_REGISTRY_IMAGE:$APP_VERSION
+    - docker ps
+    - curl http//:localhost:84/test.html | grep this
+    - echo "----login and pushing in registry ------"
+    #- docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD CI_REGISTRY ---> iviter -p pass car on ne sait jamais dans un jour sera obsolete
+    #- echo $CI_REGISTRY_PASSWORD  | docker login -u $CI_REGISTRY_USER $CI_REGISTRY --password-stdin
+    #- docker push --all-tags $CI_REGISTRY_IMAGE # login look at  above
+
+
