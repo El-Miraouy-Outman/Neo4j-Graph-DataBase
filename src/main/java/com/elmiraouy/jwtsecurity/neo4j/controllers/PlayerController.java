@@ -23,7 +23,7 @@ public class PlayerController {
     @PostMapping
     public ResponseEntity<Player> create(@RequestBody PlayerInput in) {
         Player created = service.create(in);
-        return ResponseEntity.created(URI.create("/api/players/" + created.getId())).body(created);
+        return new ResponseEntity<>(created,HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -37,8 +37,12 @@ public class PlayerController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<Player>> search(@RequestParam String q) {
-        return  new ResponseEntity<>(service.searchByName(q), HttpStatus.OK);
+    public ResponseEntity<List<Player>> search(@RequestParam String name) {
+        return  new ResponseEntity<>(service.searchByName(name), HttpStatus.OK);
+    }
+    @GetMapping("/byCoach")
+    public ResponseEntity<List<Player>> playersByCoach(@RequestParam String name) {
+        return  new ResponseEntity<>(service.playersByCoach( name), HttpStatus.OK);
     }
 
     @PutMapping("/{id}")

@@ -36,13 +36,3 @@ ENV JAR_VERSION=${APP_VERSION}
 CMD java -jar -Dspring.profiles.active=${ACTIVE_PROFILE} /app/client-service-${APP_VERSION}.jar
 #-----------------------
     #-----------------------
-
-#FROM ubuntu
-#run apt-get update 
-#run apt-get -y install apache2
-#add test.html /var/www/html
-#RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-#CMD ["apachectl", "-D", "FOREGROUND", "-e", "info", "-c", "ServerName localhost"]
-
-#ENTRYPOINT apachectl -D FOREGROUND
-#ENV name=value

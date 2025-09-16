@@ -10,6 +10,6 @@ public interface PlayerRepository extends Neo4jRepository<Player, String> {
     Optional<Player> findByName(String name);
 
     List<Player> findByNameContainingIgnoreCase(String name);
-    @Query("MATCH")
-    List<Player> findPlayerByCoach(String nameCoach);
+    @Query("MATCH (p:PLAYER  )<-[r:COACHES]-(c:COACH {name : $nameCoach} ) return p ")
+    List<Player> playersByCoach(String nameCoach);
 }

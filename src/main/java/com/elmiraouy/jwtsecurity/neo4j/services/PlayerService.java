@@ -38,8 +38,14 @@ public class PlayerService {
     }
 
     public List<Player> searchByName(String q) {
-        if (q == null || q.isBlank()) return List.of();
+        if (q == null || q.isBlank())
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Player not found: " + q);
         return repo.findByNameContainingIgnoreCase(q);
+    }
+    public List<Player> playersByCoach(String q) {
+        if (q == null || q.isBlank())
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Player not found: " + q);
+        return repo.playersByCoach(q);
     }
 
     @Transactional
