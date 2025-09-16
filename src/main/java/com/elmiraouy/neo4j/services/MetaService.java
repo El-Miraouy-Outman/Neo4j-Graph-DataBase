@@ -1,4 +1,4 @@
-package com.elmiraouy.jwtsecurity.neo4j.services;
+package com.elmiraouy.neo4j.services;
 import org.springframework.stereotype.Service;
 import org.springframework.data.neo4j.core.Neo4jClient;
 

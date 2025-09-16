@@ -1,8 +1,8 @@
-package com.elmiraouy.jwtsecurity.neo4j.repositories;
+package com.elmiraouy.neo4j.repositories;
 
 import java.util.List;
 
-import com.elmiraouy.jwtsecurity.neo4j.entities.Person;
+import com.elmiraouy.neo4j.entities.Person;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
 
 public interface PersonRepository extends Neo4jRepository<Person, Long> {

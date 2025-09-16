@@ -1,9 +1,9 @@
-package com.elmiraouy.jwtsecurity.neo4j.services;
+package com.elmiraouy.neo4j.services;
 
-import com.elmiraouy.jwtsecurity.neo4j.entities.Coach;
-import com.elmiraouy.jwtsecurity.neo4j.entities.Team;
-import com.elmiraouy.jwtsecurity.neo4j.repositories.CoachRepository;
-import com.elmiraouy.jwtsecurity.neo4j.repositories.TeamRepository;
+import com.elmiraouy.neo4j.entities.Coach;
+import com.elmiraouy.neo4j.entities.Team;
+import com.elmiraouy.neo4j.repositories.CoachRepository;
+import com.elmiraouy.neo4j.repositories.TeamRepository;
 import jakarta.transaction.Transactional;
 
 public class CoachService {

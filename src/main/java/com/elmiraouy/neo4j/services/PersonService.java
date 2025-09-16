@@ -1,7 +1,7 @@
-package com.elmiraouy.jwtsecurity.neo4j.services;
+package com.elmiraouy.neo4j.services;
 
-import com.elmiraouy.jwtsecurity.neo4j.repositories.PersonRepository;
-import com.elmiraouy.jwtsecurity.neo4j.entities.Person;
+import com.elmiraouy.neo4j.repositories.PersonRepository;
+import com.elmiraouy.neo4j.entities.Person;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

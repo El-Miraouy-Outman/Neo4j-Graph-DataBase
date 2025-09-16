@@ -1,13 +1,12 @@
-package com.elmiraouy.jwtsecurity.neo4j.controllers;
+package com.elmiraouy.neo4j.controllers;
 
-import com.elmiraouy.jwtsecurity.neo4j.entities.Player;
-import com.elmiraouy.jwtsecurity.neo4j.dtos.PlayerInput;
-import com.elmiraouy.jwtsecurity.neo4j.services.PlayerService;
+import com.elmiraouy.neo4j.entities.Player;
+import com.elmiraouy.neo4j.dtos.PlayerInput;
+import com.elmiraouy.neo4j.services.PlayerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
 import java.util.*;
 
 @RestController

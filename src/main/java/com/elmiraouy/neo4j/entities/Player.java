@@ -1,4 +1,4 @@
-package com.elmiraouy.jwtsecurity.neo4j.entities;
+package com.elmiraouy.neo4j.entities;
 
 
 import org.springframework.data.neo4j.core.schema.*;

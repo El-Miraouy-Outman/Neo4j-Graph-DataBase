@@ -1,6 +1,6 @@
-package com.elmiraouy.jwtsecurity.neo4j.repositories;
+package com.elmiraouy.neo4j.repositories;
 
-import com.elmiraouy.jwtsecurity.neo4j.entities.Coach;
+import com.elmiraouy.neo4j.entities.Coach;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
 import org.springframework.data.neo4j.repository.query.Query;
 

@@ -1,4 +1,4 @@
-package com.elmiraouy.jwtsecurity.neo4j.entities;
+package com.elmiraouy.neo4j.entities;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Optional;

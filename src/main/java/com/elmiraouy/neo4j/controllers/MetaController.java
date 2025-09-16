@@ -1,6 +1,6 @@
-package com.elmiraouy.jwtsecurity.neo4j.controllers;
+package com.elmiraouy.neo4j.controllers;
 
-import com.elmiraouy.jwtsecurity.neo4j.services.MetaService;
+import com.elmiraouy.neo4j.services.MetaService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 

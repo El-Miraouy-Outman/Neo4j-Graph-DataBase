@@ -1,8 +1,8 @@
-package com.elmiraouy.jwtsecurity.neo4j.services;
+package com.elmiraouy.neo4j.services;
 
-import com.elmiraouy.jwtsecurity.neo4j.entities.Player;
-import com.elmiraouy.jwtsecurity.neo4j.dtos.PlayerInput;
-import com.elmiraouy.jwtsecurity.neo4j.repositories.PlayerRepository;
+import com.elmiraouy.neo4j.entities.Player;
+import com.elmiraouy.neo4j.dtos.PlayerInput;
+import com.elmiraouy.neo4j.repositories.PlayerRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;

@@ -1,4 +1,4 @@
-package com.elmiraouy.jwtsecurity.neo4j.dtos;
+package com.elmiraouy.neo4j.dtos;
 
 public class PlayerInput {
     public String name;

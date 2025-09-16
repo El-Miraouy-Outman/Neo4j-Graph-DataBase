@@ -1,10 +1,10 @@
-package com.elmiraouy.jwtsecurity;
+package com.elmiraouy;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SolgeConsultingApplicationTests {
+class Neo4jApplicationTests {
 
 	@Test
 	void contextLoads() {
